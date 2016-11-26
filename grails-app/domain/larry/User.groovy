@@ -11,8 +11,12 @@ class User implements Serializable {
 
 	transient springSecurityService
 
+	static hasMany = [respuestas : Respuesta, preguntas:Pregunta]
+
 	String username
 	String password
+	String campus
+	int score
 	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
