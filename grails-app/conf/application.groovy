@@ -3,8 +3,11 @@
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'larry.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'larry.UserRole'
+grails.plugin.springsecurity.rejectIfNoRule = false
+grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 grails.plugin.springsecurity.authority.className = 'larry.Role'
-grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+grails.plugin.springsecurity.securityConfigType = "Annotation"
+grails.plugin.springsecurity.interceptUrlMap= [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
 	[pattern: '/index',          access: ['permitAll']],
@@ -22,5 +25,8 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 	[pattern: '/**/js/**',       filters: 'none'],
 	[pattern: '/**/css/**',      filters: 'none'],
 	[pattern: '/**/images/**',   filters: 'none'],
-	[pattern: '/**/favicon.ico', filters: 'none']
+	[pattern: '/**/favicon.ico', filters: 'none'],
+	[pattern: '/Respuestas', filters: 'JOINED_FILTERS'],
+	[pattern: '/Categorias', filters: 'JOINED_FILTERS'],
+	[pattern: '/Preguntas', filters: 'JOINED_FILTERS']
 ]
