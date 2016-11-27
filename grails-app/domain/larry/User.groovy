@@ -10,9 +10,6 @@ class User implements Serializable {
 	private static final long serialVersionUID = 1
 
 	transient springSecurityService
-
-	static hasMany = [respuestas : Respuesta, preguntas:Pregunta]
-
 	String username
 	String password
 	String campus

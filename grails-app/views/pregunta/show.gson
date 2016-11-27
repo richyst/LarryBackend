@@ -1,0 +1,7 @@
+import larry.Pregunta
+
+model {
+	Pregunta pregunta
+}
+
+json tmpl.pregunta(pregunta)

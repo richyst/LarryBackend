@@ -1,0 +1,8 @@
+import larry.Categoria
+
+model {
+	Iterable<Categoria> categoriaList
+}
+
+json tmpl.categoria(categoriaList ?: [])
+

@@ -1,0 +1,7 @@
+import larry.User
+
+model {
+	User user
+}
+
+json tmpl.user(user)

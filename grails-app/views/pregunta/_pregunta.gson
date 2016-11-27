@@ -1,0 +1,14 @@
+import larry.Pregunta
+
+model {
+	Pregunta pregunta
+}
+
+json{
+	id pregunta.id
+	idCat pregunta.idCat
+	texto pregunta.texto
+	titulo pregunta.titulo
+	idUser pregunta.idUser
+	fecha pregunta.dateCreated
+}

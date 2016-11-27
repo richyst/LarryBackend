@@ -1,0 +1,8 @@
+import larry.Respuesta
+
+model {
+	Iterable<Respuesta> respuestaList
+}
+
+json tmpl.respuesta(respuestaList ?: [])
+

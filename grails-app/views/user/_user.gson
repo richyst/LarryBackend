@@ -1,0 +1,12 @@
+import larry.User
+
+model {
+	User user
+}
+
+json{
+	id user.id
+	campus user.campus
+	username user.username
+	score user.score
+}

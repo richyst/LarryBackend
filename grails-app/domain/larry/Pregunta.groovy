@@ -5,9 +5,11 @@ import grails.rest.*
 
 @Resource(readOnly = false, formats = ['json', 'xml'])
 class Pregunta {
-  static hasMany = [respuestas:Respuesta]
+  int idUser
+  int idCat
+
   String titulo
   String texto
-  String status
-  
+  Date dateCreated
+
 }
