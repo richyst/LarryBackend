@@ -11,5 +11,9 @@ class Pregunta {
   String titulo
   String texto
   Date dateCreated
+  static mapping= {
+    texto type: "text"
+    titulo type: "text"
+  }
 
 }

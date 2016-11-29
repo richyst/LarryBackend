@@ -10,4 +10,7 @@ class Respuesta {
   boolean res
   String username
   int idPreg
+  static mapping= {
+    texto type: "text"
+  }
 }
